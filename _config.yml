@@ -1,0 +1,33 @@
+url: "https://www.klerk.co" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Klerk" # the name of your site, e.g. ACME Corp.
+
+permalink: /:collection/:slug
+
+include:
+  - _pages
+
+collections:
+  pages:
+    output: true
+
+# collections:
+#   ventures:
+#     output: true
+#     permalink: /:collection/:slug
+
+# defaults:
+#   - scope:
+#       type: ventures
+#     values:
+#       layout: venture
+
+plugins:
+  - jekyll-postcss-v2
+
+postcss:
+  cache: false
+
+responsive:
+  widths: [400, 950, 1400]
+  quality: 90

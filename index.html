@@ -1,0 +1,297 @@
+---
+layout: default
+title: Klerk
+---
+
+<!-- Hero -->
+<div class="flex flex-col gap-y-32 py-32">
+  <section class="container max-w-screen-xl mx-auto">
+    <div class="flex flex-col gap-y-10 text-center">
+      <h1 class="text-5xl md:text-7xl text-balance hyphens-auto">
+        Automatisér din dokumentgennemgang med Klerk
+      </h1>
+      <p class="text-2xl text-stone-400 text-balance max-w-screen-sm mx-auto">
+        Klerk hjælper køberrådgivere med at gennemgå dokumenterne i bolighandel på rekordtid.
+      </p>
+    </div>
+  </section>
+  <section 
+    class="container max-w-screen-2xl mx-auto flex flex-col gap-y-8" 
+    x-data="{ selected: 1, width: 0, startTime: null }" 
+    x-init="
+      startTime = Date.now();
+      setInterval(() => { 
+        width = ((Date.now() - startTime) / 5000) * 100;
+        if (width >= 100) {
+          selected = selected === 3 ? 1 : selected + 1;
+          startTime = Date.now();
+        }
+      }, 5)
+    "
+  >
+    <div class="flex gap-x-4">
+      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-in-out duration-300" x-bind:class="selected === 1 ? 'w-3/5' : 'w-1/5'" x-on:click="selected = 1; startTime = Date.now();">
+        <div x-show="selected === 1" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Svar på rekordtid</div>
+        <img src="https://mockups.directory/cdn/shop/files/SOM04_default.jpg?v=1725190622&width=2000" alt="Klerk" class="w-full h-full object-cover">
+      </div>
+      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-in-out duration-300" x-bind:class="selected === 2 ? 'w-3/5' : 'w-1/5'" x-on:click="selected = 2; startTime = Date.now();">
+        <div x-show="selected === 2" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
+        <img src="https://mockups.directory/cdn/shop/files/SOM05_default.jpg?v=1725190714&width=2000" alt="Klerk" class="w-full h-full object-cover">
+      </div>
+      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-in-out duration-300" x-bind:class="selected === 3 ? 'w-3/5' : 'w-1/5'" x-on:click="selected = 3; startTime = Date.now();">
+        <div x-show="selected === 3" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
+        <img src="https://mockups.directory/cdn/shop/files/SOM01_default.jpg?v=1725189423&width=2000" alt="Klerk" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="flex justify-center gap-x-2">
+      <template x-for="i in [1, 2, 3]" :key="i">
+        <button class="bg-stone-700/30 h-2 rounded-full overflow-hidden transition-[width] ease-in-out duration-300" x-on:click="selected = i; startTime = Date.now();" x-bind:class="selected === i ? 'w-10' : 'w-2'">
+          <div x-show="selected === i" x-bind:style="{ width: `${width}%` }" class="h-full bg-stone-700 rounded-full"></div>
+        </button>
+      </template>
+    </div>
+  </section>
+  <section class="hidden container max-w-screen-xl mx-auto">
+    <h2 class="text-2xl text-center mb-10">Trusted by:</h2>
+    <div class="flex gap-x-4">
+      {% for i in (1..10) %}
+      <div class="w-24">
+        <div class="bg-stone-200 aspect-video rounded-3xl"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="container max-w-screen-xl mx-auto flex gap-x-10">
+    <div class="bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden w-1/3">
+      <img src="https://sierra.ai/-/cdn/image?src=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fca4jck6w%2Fproduction%2F694cae1ed3325e0d53536be74448572e8bcad367-5880x4410.jpg&width=640&quality=90" alt="" class="w-full h-full object-cover">
+    </div>
+    <div class="rounded-3xl w-2/3 flex flex-col gap-y-8">
+      <div class="">
+        <img src="https://assets.home.dk/cms/media/w23ardmi/logo.svg?rxy=0.5,0.5&width=236&quality=80" alt="" class="h-6 w-auto">
+      </div>
+      <p class="text-4xl">
+        "Klerk er en game-changer for vores dokumentgennemgang. Det er hurtigere og mere præcist end hvad vi har brugt før."
+      </p>
+      <p class="text-lg text-stone-600">
+        Jane Doe, CEO of XYZ Corp
+      </p>
+    </div>
+  </section>
+  <section class="container max-w-screen-xl mx-auto">
+    <div class="flex gap-x-4">
+      <div class="w-1/3">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex flex-col items-center justify-center">
+          <p class="text-6xl">
+            90%
+          </p>
+          <p class="text-xl text-stone-600">
+            faster due diligence
+          </p>
+        </div>
+      </div>
+      <div class="w-1/3">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex flex-col items-center justify-center">
+          <p class="text-6xl">
+            90%
+          </p>
+          <p class="text-xl text-stone-600">
+            faster due diligence
+          </p>
+        </div>
+      </div>
+      <div class="w-1/3">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex flex-col items-center justify-center">
+          <p class="text-6xl">
+            90%
+          </p>
+          <p class="text-xl text-stone-600">
+            faster due diligence
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container max-w-screen-xl mx-auto flex flex-col gap-y-20">
+    <div class="flex gap-x-10">
+      <div class="w-1/2">
+        <h2 class="text-5xl text-balance">
+          Fremtidens dokumentgennemgang
+        </h2>
+      </div>
+      <div class="w-1/2">
+        <p class="text-lg text-stone-600">
+          Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+        </p>
+      </div>
+    </div>
+    <div class="flex gap-x-10">
+      <div class="flex flex-col gap-y-4 pt-4 w-1/2">
+        <h3 class="text-2xl text-balance">
+          Find svar på rekordtid
+        </h3>
+        <p class="text-lg text-stone-600">
+          Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+        </p>
+      </div>
+      <div class="w-1/2">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl"></div>
+      </div>
+    </div>
+    <div class="flex gap-x-10">
+      <div class="flex flex-col gap-y-4 pt-4 w-1/2">
+        <h3 class="text-2xl text-balance">
+          2. Klerk analyzes your data
+        </h3>
+        <p class="text-lg text-stone-600">
+          Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+        </p>
+      </div>
+      <div class="w-1/2">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl"></div>
+      </div>
+    </div>
+    <div class="flex gap-x-10">
+      <div class="flex flex-col gap-y-4 pt-4 w-1/2">
+        <h3 class="text-2xl text-balance">
+          3. Klerk provides you with a report
+        </h3>
+        <p class="text-lg text-stone-600">
+          Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+        </p>
+      </div>
+      <div class="w-1/2">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl"></div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-zinc-800 py-32">
+    <div class="container max-w-screen-xl mx-auto flex flex-col gap-y-20">
+      <div class="flex gap-x-10">
+        <div class="w-1/2">
+          <h2 class="text-5xl text-balance text-stone-50">
+            Safe, secure, and compliant
+          </h2>
+        </div>
+        <div class="w-1/2">
+          <p class="text-lg text-stone-50">
+            Data security is our top priority. We use the latest encryption and security protocols to ensure your data is safe and secure.
+          </p>
+        </div>
+      </div>
+      <div class="flex gap-x-10">
+        <div class="w-1/2">
+          <div class="bg-stone-200/30 aspect-[4/3] rounded-3xl overflow-hidden">
+            <img src="https://mockups.directory/cdn/shop/files/SOM07_default.jpg?v=1725790882&width=2000" alt="" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="w-1/2">
+          <div x-data="{ selected: 1 }" class="flex flex-col gap-y-0.5 text-stone-50">
+            <div role="button" tabindex="0" x-on:click="selected = 1" x-bind:class="selected === 1 ? 'bg-stone-50/10' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-50/10 py-4 px-6 transition duration-200 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="globe" class="w-5 h-5 inline-block mr-2"></span>
+                Based in the EU
+              </h3>
+              <p x-bind:class="selected === 1 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+            <div role="button" tabindex="0" x-on:click="selected = 2" x-bind:class="selected === 2 ? 'bg-stone-50/10' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-50/10 py-4 px-6 transition duration-200 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="shield-check" class="w-5 h-5 inline-block mr-2"></span>
+                Secure encryption
+              </h3>
+              <p x-bind:class="selected === 2 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+            <div role="button" tabindex="0" x-on:click="selected = 3" x-bind:class="selected === 3 ? 'bg-stone-50/10' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-50/10 py-4 px-6 transition duration-200 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="handshake" class="w-5 h-5 inline-block mr-2"></span>
+                Your data is yours
+              </h3>
+              <p x-bind:class="selected === 3 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container max-w-screen-xl mx-auto">
+    <div class="flex flex-col gap-y-20">
+      <div class="flex gap-x-10">
+        <div class="w-1/2">
+          <h2 class="text-5xl text-balance">
+            Know it all
+          </h2>
+        </div>
+        <div class="w-1/2">
+          <p class="text-lg text-stone-600">
+            Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+          </p>
+        </div>
+      </div>
+      <div x-data="{ selected: 1 }" class="flex gap-x-10">
+        <div class="w-1/3">
+          <div class="flex flex-col gap-y-0.5">
+            <div role="button" tabindex="0" x-on:click="selected = 1" x-bind:class="selected === 1 ? 'bg-stone-200/30' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-200/30 py-4 px-6 transition duration-500 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="goal" class="w-5 h-5 inline-block mr-2"></span>
+                Key Metrics
+              </h3>
+              <p x-bind:class="selected === 1 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-100 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+            <div role="button" tabindex="0" x-on:click="selected = 2" x-bind:class="selected === 2 ? 'bg-stone-200/30' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-200/30 py-4 px-6 transition duration-500 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="file-text" class="w-5 h-5 inline-block mr-2"></span>
+                Summaries
+              </h3>
+              <p x-bind:class="selected === 2 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-100 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+            <div role="button" tabindex="0" x-on:click="selected = 3" x-bind:class="selected === 3 ? 'bg-stone-200/30' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-200/30 py-4 px-6 transition duration-500 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="list-checks" class="w-5 h-5 inline-block mr-2"></span>
+                Lists
+              </h3>
+              <p x-bind:class="selected === 3 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-100 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-2/3">
+          <div class="bg-stone-200/30 aspect-[4/3] rounded-3xl flex items-center justify-center">
+            <div x-show="selected === 1" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
+              <img src="{{ '/assets/images/metric.png' | relative_url }}" alt="">
+            </div>
+            <div x-show="selected === 2" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
+              <img src="{{ '/assets/images/summary.png' | relative_url }}" alt="">
+            </div>
+            <div x-show="selected === 3" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
+              <img src="{{ '/assets/images/list.png' | relative_url }}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container max-w-screen-xl mx-auto py-20 bg-amber-300 rounded-3xl">
+    <div class="flex flex-col gap-y-10 items-center justify-center text-center">
+      <h2 class="text-7xl text-balance">
+        Get started with Klerk
+      </h2>
+      <p class="text-xl text-stone-700 max-w-screen-sm text-balance">
+        Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+      </p>
+      <button class="group bg-stone-900 text-stone-50 px-5 py-3 rounded-3xl flex items-center hover:bg-stone-700 transition-colors duration-200 ease-in-out">
+        Book a demo
+        <span data-lucide="arrow-right" class="w-5 h-5 stroke-1 inline-block ml-2 group-hover:translate-x-1 transition-transform duration-200 ease-in-out"></span>
+      </button>
+    </div>
+  </section>
+</div>
