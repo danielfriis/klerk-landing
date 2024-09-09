@@ -1,8 +1,17 @@
 <div class="bg-stone-100 text-stone-600">
-  <div class="container max-w-screen-xl mx-auto py-14">
-    <div class="flex justify-between items-center">
+  <div class="container max-w-screen-xl mx-auto py-14 flex flex-col gap-y-4">
+    <div class="flex items-center gap-x-4">
+      Klerk
+    </div>
+    <div class="flex items-center gap-x-4">
+      <a href="{{ '/pages/terms' | url }}">Book a demo</a>
+      <a href="{{ '/pages/terms' | url }}">Contact</a>
+      <a href="{{ '/pages/terms' | url }}">Terms of Service</a>
+      <a href="{{ '/pages/privacy' | url }}">Privacy Policy</a>
+      <a href="{{ '/pages/privacy' | url }}">DPA</a>
+    </div>
+    <div class="flex items-center gap-x-4">
       <div>© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
-      <a class="underline" href="{{ '/pages/gdpr' | url }}">GDPR (DK)</a>
     </div>
   </div>
 </div>
