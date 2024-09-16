@@ -4,7 +4,7 @@ title: Klerk
 ---
 
 <!-- Hero -->
-<div class="flex flex-col gap-y-32 py-32">
+<div class="flex flex-col gap-y-32 py-32 px-4">
   <section class="container max-w-screen-xl mx-auto">
     <div class="flex flex-col gap-y-10 text-center">
       <h1 class="text-5xl md:text-7xl text-balance hyphens-auto">
@@ -29,23 +29,23 @@ title: Klerk
       }, 5)
     "
   >
-    <div class="flex gap-x-4">
-      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-in-out duration-300" x-bind:class="selected === 1 ? 'w-3/5' : 'w-1/5'" x-on:click="selected = 1; startTime = Date.now();">
+    <div class="flex gap-x-3">
+      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 1 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 1; startTime = Date.now();">
         <div x-show="selected === 1" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Svar på rekordtid</div>
         <img src="https://mockups.directory/cdn/shop/files/SOM04_default.jpg?v=1725190622&width=2000" alt="Klerk" class="w-full h-full object-cover">
       </div>
-      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-in-out duration-300" x-bind:class="selected === 2 ? 'w-3/5' : 'w-1/5'" x-on:click="selected = 2; startTime = Date.now();">
+      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 2 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 2; startTime = Date.now();">
         <div x-show="selected === 2" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
         <img src="https://mockups.directory/cdn/shop/files/SOM05_default.jpg?v=1725190714&width=2000" alt="Klerk" class="w-full h-full object-cover">
       </div>
-      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-in-out duration-300" x-bind:class="selected === 3 ? 'w-3/5' : 'w-1/5'" x-on:click="selected = 3; startTime = Date.now();">
+      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 3 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 3; startTime = Date.now();">
         <div x-show="selected === 3" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
         <img src="https://mockups.directory/cdn/shop/files/SOM01_default.jpg?v=1725189423&width=2000" alt="Klerk" class="w-full h-full object-cover">
       </div>
     </div>
     <div class="flex justify-center gap-x-2">
       <template x-for="i in [1, 2, 3]" :key="i">
-        <button class="bg-stone-700/30 h-2 rounded-full overflow-hidden transition-[width] ease-in-out duration-300" x-on:click="selected = i; startTime = Date.now();" x-bind:class="selected === i ? 'w-10' : 'w-2'">
+        <button class="bg-stone-700/30 h-2 rounded-full overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-on:click="selected = i; startTime = Date.now();" x-bind:class="selected === i ? 'w-10' : 'w-2'">
           <div x-show="selected === i" x-bind:style="{ width: `${width}%` }" class="h-full bg-stone-700 rounded-full"></div>
         </button>
       </template>
@@ -164,7 +164,7 @@ title: Klerk
       </div>
     </div>
   </section>
-  <section class="bg-zinc-800 py-32">
+  <section class="bg-zinc-800 py-32 -mx-4">
     <div class="container max-w-screen-xl mx-auto flex flex-col gap-y-20">
       <div class="flex gap-x-10">
         <div class="w-1/2">
@@ -267,10 +267,28 @@ title: Klerk
         <div class="w-2/3">
           <div class="bg-stone-200/30 aspect-[4/3] rounded-3xl flex items-center justify-center">
             <div x-show="selected === 1" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
-              <img src="{{ '/assets/images/metric.png' | relative_url }}" alt="">
+              <div class="flex items-center gap-x-4 border border-neutral-300/60 rounded-3xl p-4">
+                <div class="flex items-center justify-center bg-green-700 rounded-full p-2"><span data-lucide="check" class="w-5 h-5 inline-block text-white"></span></div>
+                <p class="grow text-xl text-neutral-600">
+                  Hvornår udløber tilstandsrapporten?
+                </p>
+                <span class="text-neutral-600 px-4 py-2 bg-white rounded-3xl">
+                  1. januar 2024
+                </span>
+              </div>
             </div>
             <div x-show="selected === 2" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
-              <img src="{{ '/assets/images/summary.png' | relative_url }}" alt="">
+              <div class="flex items-start gap-x-4 border border-neutral-200 rounded-3xl p-4">
+                <div class="flex items-center justify-center bg-green-700 rounded-full p-2"><span data-lucide="check" class="w-5 h-5 inline-block text-white"></span></div>
+                <div class="grow flex flex-col gap-y-4">
+                  <p class="h-5 my-2 leading-none text-xl text-neutral-600">
+                    Indeholder ejerskifteforsikringen forbehold?
+                  </p>
+                  <span class="text-neutral-600 px-4 py-2 bg-white rounded-2xl">
+                    Aliquip occaecat mollit cillum officia pariatur exercitation labore magna nisi sunt sit magna duis. Culpa est sunt voluptate tempor ut cupidatat voluptate. Laborum cupidatat labore ex aute esse proident minim reprehenderit laborum aute ex et incididunt tempor veniam. Deserunt nulla proident sit aute et mollit id aliquip. Dolore sunt cillum officia amet anim. Cillum est excepteur non eiusmod proident. Et sint labore exercitation et occaecat qui irure dolore eiusmod non aliqua sit sunt aliqua minim.
+                  </span>
+                </div>
+              </div>
             </div>
             <div x-show="selected === 3" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
               <img src="{{ '/assets/images/list.png' | relative_url }}" alt="">
