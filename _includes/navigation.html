@@ -1,7 +1,9 @@
-<!-- <div>
-  <nav class="h-14 px-3 flex items-center justify-between">
-    <a href="{{ site.url | relative_url }}" class="font-extrabold text-lg tracking-tight rounded-sm bg-neutral-900 px-3 py-2">
-      <span class="text-white">Holm/Friis</span>
-    </a>
-  </nav>
-</div> -->
+<nav class="fixed inset-x-0 top-0 h-14 px-6 flex items-center justify-between">
+  <a href="{{ site.url | relative_url }}">
+    <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
+  </a>
+  <div class="flex items-center gap-x-6 text-sm">
+    <a href="{{ '/pages/terms' | url }}">Book a demo</a>
+    <a href="{{ '/pages/terms' | url }}">Contact</a>
+  </div>
+</nav>
