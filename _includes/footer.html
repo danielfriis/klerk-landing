@@ -1,17 +1,15 @@
 <div class="bg-stone-100 text-stone-600">
-  <div class="container max-w-screen-xl mx-auto py-14 flex flex-col gap-y-4">
-    <div class="flex items-center gap-x-4">
-      Klerk
+  <div class="container max-w-screen-xl mx-auto py-14 flex justify-between">
+    <div class="flex flex-col gap-y-4 items-start">
+      <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
+      <div class="text-sm">© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
     </div>
     <div class="flex items-center gap-x-4">
-      <a href="{{ '/pages/terms' | url }}">Book a demo</a>
-      <a href="{{ '/pages/terms' | url }}">Contact</a>
-      <a href="{{ '/pages/terms' | url }}">Terms of Service</a>
-      <a href="{{ '/pages/privacy' | url }}">Privacy Policy</a>
-      <a href="{{ '/pages/privacy' | url }}">DPA</a>
-    </div>
-    <div class="flex items-center gap-x-4">
-      <div>© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
+      <a class="hover:underline" href="{{ '/pages/terms' | url }}">Book a demo</a>
+      <a class="hover:underline" href="{{ '/pages/terms' | url }}">Contact</a>
+      <a class="hover:underline" href="{{ '/pages/terms' | url }}">Terms of Service</a>
+      <a class="hover:underline" href="{{ '/pages/privacy' | url }}">Privacy Policy</a>
+      <a class="hover:underline" href="{{ '/pages/privacy' | url }}">DPA</a>
     </div>
   </div>
 </div>

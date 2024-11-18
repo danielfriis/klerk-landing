@@ -7,6 +7,9 @@ title: Klerk
 <div class="flex flex-col gap-y-32 py-32 px-4">
   <section class="container max-w-screen-xl mx-auto">
     <div class="flex flex-col gap-y-10 text-center">
+      <div>
+        <img src="{{ site.baseurl }}/assets/images/logo.svg" alt="Klerk" class="w-auto h-6 mx-auto">
+      </div>
       <h1 class="text-5xl md:text-7xl text-balance hyphens-auto">
         Automatisér din dokumentgennemgang med Klerk
       </h1>
@@ -15,41 +18,8 @@ title: Klerk
       </p>
     </div>
   </section>
-  <section 
-    class="container max-w-screen-2xl mx-auto flex flex-col gap-y-8" 
-    x-data="{ selected: 1, width: 0, startTime: null }" 
-    x-init="
-      startTime = Date.now();
-      setInterval(() => { 
-        width = ((Date.now() - startTime) / 5000) * 100;
-        if (width >= 100) {
-          selected = selected === 3 ? 1 : selected + 1;
-          startTime = Date.now();
-        }
-      }, 5)
-    "
-  >
-    <div class="flex gap-x-3">
-      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 1 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 1; startTime = Date.now();">
-        <div x-show="selected === 1" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Svar på rekordtid</div>
-        <img src="https://mockups.directory/cdn/shop/files/SOM04_default.jpg?v=1725190622&width=2000" alt="Klerk" class="w-full h-full object-cover">
-      </div>
-      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 2 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 2; startTime = Date.now();">
-        <div x-show="selected === 2" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
-        <img src="https://mockups.directory/cdn/shop/files/SOM05_default.jpg?v=1725190714&width=2000" alt="Klerk" class="w-full h-full object-cover">
-      </div>
-      <div role="button" tabindex="0" class="relative bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 3 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 3; startTime = Date.now();">
-        <div x-show="selected === 3" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
-        <img src="https://mockups.directory/cdn/shop/files/SOM01_default.jpg?v=1725189423&width=2000" alt="Klerk" class="w-full h-full object-cover">
-      </div>
-    </div>
-    <div class="flex justify-center gap-x-2">
-      <template x-for="i in [1, 2, 3]" :key="i">
-        <button class="bg-stone-700/30 h-2 rounded-full overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-on:click="selected = i; startTime = Date.now();" x-bind:class="selected === i ? 'w-10' : 'w-2'">
-          <div x-show="selected === i" x-bind:style="{ width: `${width}%` }" class="h-full bg-stone-700 rounded-full"></div>
-        </button>
-      </template>
-    </div>
+  <section class="container max-w-screen-2xl mx-auto flex flex-col gap-y-8">
+    <div class="flex gap-x-3 bg-stone-200/50 rounded-3xl aspect-[16/9]">
   </section>
   <section class="hidden container max-w-screen-xl mx-auto">
     <h2 class="text-2xl text-center mb-10">Trusted by:</h2>
@@ -63,7 +33,7 @@ title: Klerk
   </section>
   <section class="container max-w-screen-xl mx-auto flex gap-x-10">
     <div class="bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden w-1/3">
-      <img src="https://sierra.ai/-/cdn/image?src=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fca4jck6w%2Fproduction%2F694cae1ed3325e0d53536be74448572e8bcad367-5880x4410.jpg&width=640&quality=90" alt="" class="w-full h-full object-cover">
+      <img src="{{ site.baseurl }}/assets/images/profile.png" alt="" class="w-full h-full object-cover">
     </div>
     <div class="rounded-3xl w-2/3 flex flex-col gap-y-8">
       <div class="">
@@ -124,8 +94,8 @@ title: Klerk
         </p>
       </div>
     </div>
-    <div class="flex gap-x-10">
-      <div class="flex flex-col gap-y-4 pt-4 w-1/2">
+    <div class="flex items-center gap-x-10">
+      <div class="flex flex-col gap-y-4 w-1/2">
         <h3 class="text-2xl text-balance">
           Find svar på rekordtid
         </h3>
@@ -137,8 +107,8 @@ title: Klerk
         <div class="bg-stone-200/50 aspect-video rounded-3xl"></div>
       </div>
     </div>
-    <div class="flex gap-x-10">
-      <div class="flex flex-col gap-y-4 pt-4 w-1/2">
+    <div class="flex items-center gap-x-10">
+      <div class="flex flex-col gap-y-4 w-1/2">
         <h3 class="text-2xl text-balance">
           Klerk analyzes your data
         </h3>
@@ -150,8 +120,8 @@ title: Klerk
         <div class="bg-stone-200/50 aspect-video rounded-3xl"></div>
       </div>
     </div>
-    <div class="flex gap-x-10">
-      <div class="flex flex-col gap-y-4 pt-4 w-1/2">
+    <div class="flex items-center gap-x-10">
+      <div class="flex flex-col gap-y-4 w-1/2">
         <h3 class="text-2xl text-balance">
           Klerk provides you with a report
         </h3>
@@ -191,7 +161,7 @@ title: Klerk
                 <span data-lucide="globe" class="w-5 h-5 inline-block mr-2"></span>
                 Based in the EU
               </h3>
-              <p x-bind:class="selected === 1 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
+              <p x-bind:class="selected === 1 ? 'max-h-56 pt-4' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
                 Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
               </p>
             </div>
@@ -200,7 +170,7 @@ title: Klerk
                 <span data-lucide="shield-check" class="w-5 h-5 inline-block mr-2"></span>
                 Secure encryption
               </h3>
-              <p x-bind:class="selected === 2 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
+              <p x-bind:class="selected === 2 ? 'max-h-56 pt-4' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
                 Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
               </p>
             </div>
@@ -209,7 +179,7 @@ title: Klerk
                 <span data-lucide="handshake" class="w-5 h-5 inline-block mr-2"></span>
                 Your data is yours
               </h3>
-              <p x-bind:class="selected === 3 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
+              <p x-bind:class="selected === 3 ? 'max-h-56 pt-4' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
                 Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
               </p>
             </div>
@@ -225,39 +195,29 @@ title: Klerk
           FAQ
         </h2>
       </div>
-      <div class="w-full flex flex-col bg-stone-200/50 rounded-3xl divide-y divide-white justify-start text-left">
-        <div class="py-4 flex flex-col gap-y-2">
-          <div class="flex items-center justify-between">
-            <h3 class="text-xl text-balance">
-              Question 1
-            </h3>
-            <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto"></span>
+      <div class="w-full flex flex-col bg-stone-200/50 rounded-2xl divide-y divide-white justify-start text-left">
+        {% for i in (1..8) %}
+          <div x-data="{ open: false }" class="cursor-pointer py-4 flex flex-col gap-y-2">
+            <div role="button" tabindex="0" class="flex items-center justify-between px-4" x-on:click="open = !open">
+              <h3 class="text-xl text-balance">
+                Question {{ i }}
+              </h3>
+              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
+            </div>
+            <div x-show="open" class="pt-4 px-4">
+              <p class="text-lg text-stone-600">
+                Answer {{ i }}
+              </p>
+            </div>
           </div>
-          <div class="hidden">
-            <p class="text-lg text-stone-600">
-              Answer 1
-            </p>
-          </div>
-        </div>
-        <div class="py-4 flex flex-col gap-y-2">
-          <div>
-            <h3 class="text-xl text-balance">
-              Question 1
-            </h3>
-          </div>
-          <div class="hidden">
-            <p class="text-lg text-stone-600">
-              Answer 1
-            </p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section> 
   
   <section class="container max-w-screen-xl mx-auto py-20 bg-amber-300 rounded-3xl">
     <div class="flex flex-col gap-y-10 items-center justify-center text-center">
-      <h2 class="text-7xl text-balance">
+      <h2 class="text-7xl text-balance pt-10 font-medium">
         Get started with Klerk
       </h2>
       <p class="text-xl text-stone-700 max-w-screen-sm text-balance">

@@ -1,0 +1,36 @@
+<section 
+  class="container max-w-screen-2xl mx-auto flex flex-col gap-y-8" 
+  x-data="{ selected: 1, width: 0, startTime: null }" 
+  x-init="
+    startTime = Date.now();
+    setInterval(() => { 
+      width = ((Date.now() - startTime) / 5000) * 100;
+      if (width >= 100) {
+        selected = selected === 3 ? 1 : selected + 1;
+        startTime = Date.now();
+      }
+    }, 5)
+  "
+>
+  <div class="flex gap-x-3">
+    <div role="button" tabindex="0" class="relative bg-stone-200 h-[600px] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 1 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 1; startTime = Date.now();">
+      <div x-show="selected === 1" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Svar på rekordtid</div>
+      <img src="https://mockups.directory/cdn/shop/files/SOM04_default.jpg?v=1725190622&width=2000" alt="Klerk" class="w-full h-full object-cover">
+    </div>
+    <div role="button" tabindex="0" class="relative bg-stone-200 h-[600px] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 2 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 2; startTime = Date.now();">
+      <div x-show="selected === 2" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
+      <img src="https://mockups.directory/cdn/shop/files/SOM05_default.jpg?v=1725190714&width=2000" alt="Klerk" class="w-full h-full object-cover">
+    </div>
+    <div role="button" tabindex="0" class="relative bg-stone-200 h-[600px] rounded-3xl overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-bind:class="selected === 3 ? 'w-4/6' : 'w-1/6'" x-on:click="selected = 3; startTime = Date.now();">
+      <div x-show="selected === 3" class="absolute top-6 left-6 bg-stone-800/30 text-white py-2 px-4 rounded-full">Opdag nye muligheder</div>
+      <img src="https://mockups.directory/cdn/shop/files/SOM01_default.jpg?v=1725189423&width=2000" alt="Klerk" class="w-full h-full object-cover">
+    </div>
+  </div>
+  <div class="flex justify-center gap-x-2">
+    <template x-for="i in [1, 2, 3]" :key="i">
+      <button class="bg-stone-700/30 h-2 rounded-full overflow-hidden transition-[width] ease-[cubic-bezier(1,0,.3,1)] duration-[800ms]" x-on:click="selected = i; startTime = Date.now();" x-bind:class="selected === i ? 'w-10' : 'w-2'">
+        <div x-show="selected === i" x-bind:style="{ width: `${width}%` }" class="h-full bg-stone-700 rounded-full"></div>
+      </button>
+    </template>
+  </div>
+</section>
