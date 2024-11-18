@@ -16,13 +16,16 @@
   </head>
   <body class="antialiased tracking-tight bg-neutral-50" x-init="console.log('It\'s alive!')">
     <main class="flex flex-col">
-      <!-- <div>
-  <nav class="h-14 px-3 flex items-center justify-between">
-    <a href="https://www.klerk.co" class="font-extrabold text-lg tracking-tight rounded-sm bg-neutral-900 px-3 py-2">
-      <span class="text-white">Holm/Friis</span>
-    </a>
-  </nav>
-</div> -->
+      <nav class="fixed inset-x-0 top-0 h-14 px-6 flex items-center justify-between">
+  <a href="https://www.klerk.co">
+    <img src="/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
+  </a>
+  <div class="flex items-center gap-x-6 text-sm">
+    <a href="/pages/terms">About</a>
+    <a href="/pages/terms">Product</a>
+    <a href="/pages/terms">Request access</a>
+  </div>
+</nav>
 
       <div class="h-full flex flex-col">
         <div class="flex-grow">
@@ -43,7 +46,7 @@
       <img src="/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
       <div class="text-sm">© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
     </div>
-    <div class="flex items-center gap-x-4">
+    <div class="flex items-center gap-x-6 text-sm">
       <a class="hover:underline" href="/pages/terms">Book a demo</a>
       <a class="hover:underline" href="/pages/terms">Contact</a>
       <a class="hover:underline" href="/pages/terms">Terms of Service</a>
