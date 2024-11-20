@@ -21,27 +21,27 @@
     <img src="/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
   </a>
   <div class="flex items-center gap-x-6 text-sm">
-    <a href="/pages/terms">About</a>
-    <a href="/pages/terms">Product</a>
-    <a href="/pages/terms">Request access</a>
+    <a href="#about">About</a>
+    <a href="#product">Product</a>
+    <a href="#" class="bg-stone-900 text-stone-50 px-3 py-1 rounded-full">Request access</a>
   </div>
 </nav>
 
       <div class="h-full flex flex-col">
         <div class="flex-grow">
           <!-- Hero -->
-<div class="flex flex-col gap-y-32 py-32 px-4 hyphens-auto">
+<div class="flex flex-col gap-y-28 py-32 px-4 hyphens-auto">
   <section class="container max-w-screen-xl mx-auto">
-    <div class="flex flex-col gap-y-10 text-center">
+    <div class="flex flex-col gap-y-10 text-center mt-12">
       <h1 class="text-5xl md:text-7xl text-balance">
-        Automatisér din dokumentgennemgang med Klerk
+        Gennemgå dokumenterne i en bolighandel på rekordtid
       </h1>
-      <p class="text-2xl text-stone-400 text-balance max-w-screen-sm mx-auto">
-        Klerk hjælper køberrådgivere med at gennemgå dokumenterne i bolighandel på rekordtid.
+      <p class="text-2xl text-stone-400 text-balance max-w-screen-md mx-auto">
+        Klerk hjælper rådgivere med lynhurtigt at skabe overblik over sager så de kan fokusere på det vigtige: at rådgive kunden bedst muligt.
       </p>
     </div>
   </section>
-  <section class="container max-w-screen-2xl mx-auto flex flex-col gap-y-8">
+  <section class="container max-w-screen-2xl mx-auto flex flex-col">
     <div class="flex gap-x-3 bg-stone-200/50 rounded-3xl aspect-[16/9]">
   </section>
   <section class="hidden container max-w-screen-xl mx-auto">
@@ -90,7 +90,7 @@
       
     </div>
   </section>
-  <section class="container max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10">
+  <section id="about" class="container max-w-screen-xl mx-auto flex flex-col md:flex-row gap-10">
     <div class="flex flex-col gap-y-4 w-full md:w-1/3">
       <div class="bg-stone-200 aspect-[4/3] rounded-3xl overflow-hidden">
         <img src="/assets/images/profile.png" alt="" class="w-full h-full object-cover">
@@ -149,7 +149,7 @@
       
     </div>
   </section>
-  <section class="container max-w-screen-xl mx-auto flex flex-col gap-y-20">
+  <section id="product" class="container max-w-screen-xl mx-auto flex flex-col gap-y-20">
     <div class="flex flex-col md:flex-row gap-10">
       <div class="w-full md:w-1/2">
         <h2 class="text-5xl text-balance">
@@ -207,12 +207,12 @@
       <div class="flex flex-col md:flex-row gap-10">
         <div class="w-full md:w-1/2">
           <h2 class="text-5xl text-balance text-stone-50">
-            Safe, secure, and compliant
+            Trygt, <br>sikkert, <br>og compliant
           </h2>
         </div>
         <div class="w-full md:w-1/2">
           <p class="text-lg text-stone-50">
-            Data security is our top priority. We use the latest encryption and security protocols to ensure your data is safe and secure.
+            Datasikkerhed er vores højeste prioritet. Vi bruger de seneste krypterings- og sikkerhedsprotokoller for at sikre, at dine data er sikre.
           </p>
         </div>
       </div>
@@ -227,28 +227,28 @@
             <div role="button" tabindex="0" x-on:click="selected = 1" x-bind:class="selected === 1 ? 'bg-stone-50/10' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-50/10 py-4 px-6 transition duration-200 ease-in-out">
               <h3 class="text-xl text-balance flex items-center">
                 <span data-lucide="globe" class="w-5 h-5 inline-block mr-2"></span>
-                Based in the EU
+                Baseret i EU
               </h3>
               <p x-bind:class="selected === 1 ? 'max-h-56 pt-4' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
-                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+                Klerk er baseret i EU, hvilket betyder, at dine data er sikre og overholder de nærmeste regler.
               </p>
             </div>
             <div role="button" tabindex="0" x-on:click="selected = 2" x-bind:class="selected === 2 ? 'bg-stone-50/10' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-50/10 py-4 px-6 transition duration-200 ease-in-out">
               <h3 class="text-xl text-balance flex items-center">
                 <span data-lucide="shield-check" class="w-5 h-5 inline-block mr-2"></span>
-                Secure encryption
+                Sikker kryptering
               </h3>
               <p x-bind:class="selected === 2 ? 'max-h-56 pt-4' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
-                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+                Klerk bruger de seneste krypterings- og sikkerhedsprotokoller for at sikre, at dine data er sikre.
               </p>
             </div>
             <div role="button" tabindex="0" x-on:click="selected = 3" x-bind:class="selected === 3 ? 'bg-stone-50/10' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-stone-50/10 py-4 px-6 transition duration-200 ease-in-out">
               <h3 class="text-xl text-balance flex items-center">
                 <span data-lucide="handshake" class="w-5 h-5 inline-block mr-2"></span>
-                Your data is yours
+                Din data er din
               </h3>
               <p x-bind:class="selected === 3 ? 'max-h-56 pt-4' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-200 ease-in-out">
-                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+                Din data er din. Vi vil aldrig sælge din data eller videregive den til tredjepart uden dit udtrykkelige samtykke.
               </p>
             </div>
           </div>
@@ -404,7 +404,7 @@
       <img src="/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
       <div class="text-sm">© Copyright <span x-text="new Date().getFullYear()">2030</span></div>
     </div>
-    <div class="grid grid-cols-2 md:flex items-center gap-x-6 gap-y-2 text-sm order-first md:order-none">
+    <div class="grid grid-cols-2 md:flex items-end gap-x-6 gap-y-2 text-sm order-first md:order-none">
       <a class="hover:underline" href="/pages/terms">Book a demo</a>
       <a class="hover:underline" href="/pages/terms">Contact</a>
       <a class="hover:underline" href="/pages/terms">Terms of Service</a>
