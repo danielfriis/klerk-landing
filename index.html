@@ -372,9 +372,12 @@
             Sikkerhed i topklasse
           </h2>
         </div>
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/2 flex flex-col gap-y-2">
           <p class="text-lg text-stone-50">
             Datasikkerhed er vores højeste prioritet. Vi bruger de seneste krypterings- og sikkerhedsprotokoller for at sikre, at dine data er sikre.
+          </p>
+          <p class="text-zinc-400">
+            Lær mere om, hvordan vi beskytter dine data, i vores <a href="/legal/dpa" class="underline">Fortrolighedspolitik</a> og <a href="/legal/dpa" class="underline">DPA</a>.
           </p>
         </div>
       </div>
@@ -465,6 +468,34 @@
             <div x-show="open" class="px-4 pb-6">
               <p class="text-lg text-stone-600">
                 Ja, Klerk er designet til at fungere med alle typer af ejendomme. Vi tilbyder en bred vifte af funktioner, der er specielt tilpasset for hver enkelt type ejendom, så du kan få det bedste resultat.
+              </p>
+            </div>
+          </div>
+        
+          <div x-data="{ open: false }" class=" flex flex-col">
+            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
+              <h3 class="text-xl text-balance">
+                Hvordan sikrer Klerk datasikkerheden?
+              </h3>
+              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
+            </div>
+            <div x-show="open" class="px-4 pb-6">
+              <p class="text-lg text-stone-600">
+                Klerk er designet med datasikkerhed i topklasse. Vi bruger de seneste krypterings- og sikkerhedsprotokoller for at sikre, at dine data er sikre. Desuden er alle data gemt på sikre servere i EU.
+              </p>
+            </div>
+          </div>
+        
+          <div x-data="{ open: false }" class=" flex flex-col">
+            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
+              <h3 class="text-xl text-balance">
+                Er Klerk GDPR-kompatibel?
+              </h3>
+              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
+            </div>
+            <div x-show="open" class="px-4 pb-6">
+              <p class="text-lg text-stone-600">
+                Ja, Klerk er kompatibel med GDPR. Vi sikrer, at alle data, der behandles gennem platformen, overholder de nærmeste regler. Du finder vores DPA og Fortrolighedspolitik nederst i 'footeren' på denne side.
               </p>
             </div>
           </div>
