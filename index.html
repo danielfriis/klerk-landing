@@ -3,8 +3,14 @@ layout: default
 title: Klerk
 benefits:
   - label: 'Skab overblik'
+    icon: 'file-text'
+    description: 'Klerk giver dig et overblik over dokumenterne, så du kan fokusere på de vigtige oplysninger.'
   - label: 'Reducer fejl'
+    icon: 'list-checks'
+    description: 'Klerk er designet til at finde alle de vigtige oplysninger, så du undgår fejl.'
   - label: 'Spar tid'
+    icon: 'clock'
+    description: 'Klerk er designet til at finde alle de vigtige oplysninger, så du undgår fejl.'
 documents:
   - name: 'Købsaftale (underskrevet).pdf'
     size: '1.2 MB'
@@ -29,7 +35,7 @@ questions:
   - label: 'Hvordan fungerer Klerk?'
     answer: 'Klerk fungerer ved at du uploader dokumenterne til platformen, og Klerk bruger AI til at gennemgå dokumenterne og finde de vigtige oplysninger. Du kan derefter få en oversigt over dokumenterne og de vigtige oplysninger, samt få forklaringer på hvordan de er fundet.'
   - label: 'Virker Klerk med alle typer af ejendomme?'
-    answer: 'Ja, Klerk er designet til at fungere med alle typer af ejendomme. Vi tilbyder en bred vifte af funktioner, der er specielt tilpasset for hver enkelt type ejendom, så du kan få det bedste resultat.'
+    answer: 'Klerk kan på nuværende tidspunkt kun bruges på ejerboliger herunder villaer. Vi planlægger at udvide til alle andre typer ejendomme i den nærmeste fremtid.'
   - label: 'Hvordan sikrer Klerk datasikkerheden?'
     answer: 'Klerk er designet med datasikkerhed i topklasse. Vi bruger de seneste krypterings- og sikkerhedsprotokoller for at sikre, at dine data er sikre. Desuden er alle data gemt på sikre servere i EU.'
   - label: 'Er Klerk GDPR-kompatibel?'
@@ -88,16 +94,97 @@ questions:
     <div class="flex flex-col md:flex-row gap-4">
       {% for benefit in page.benefits %}
         <div class="basis-full md:basis-1/3">
-          <div class="bg-stone-200/50 aspect-video rounded-3xl flex flex-col items-center justify-center">
-            <p class="text-4xl">
+          <div class="border border-neutral-200/80 rounded-3xl aspect-video flex flex-col gap-y-4 justify-center p-8">
+            <h4 class="text-xl">
+              <span data-lucide="{{ benefit.icon }}" class="w-5 h-5 inline-block mr-2"></span>
               {{ benefit.label }}
-            </p>
-            <p class="text-xl text-stone-600">
-              faster due diligence
+            </h4>
+            <p class="text-lg text-stone-600">
+              {{ benefit.description }}
             </p>
           </div>
         </div>
       {% endfor %}
+    </div>
+  </section>
+  <section class="bg-westar-100 py-20">
+    <div class="container max-w-screen-xl mx-auto flex flex-col gap-y-20">
+      <div class="flex gap-x-10">
+        <div class="w-1/2">
+          <h2 class="text-5xl text-balance">
+            Know it all
+          </h2>
+        </div>
+        <div class="w-1/2">
+          <p class="text-lg text-stone-600">
+            Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+          </p>
+        </div>
+      </div>
+      <div x-data="{ selected: 1 }" class="flex gap-x-10">
+        <div class="w-1/3">
+          <div class="flex flex-col gap-y-0.5">
+            <div role="button" tabindex="0" x-on:click="selected = 1" x-bind:class="selected === 1 ? 'bg-neutral-50' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-neutral-50 py-4 px-6 transition duration-500 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="goal" class="w-5 h-5 inline-block mr-2"></span>
+                Key Metrics
+              </h3>
+              <p x-bind:class="selected === 1 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-100 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+            <div role="button" tabindex="0" x-on:click="selected = 2" x-bind:class="selected === 2 ? 'bg-neutral-50' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-neutral-50 py-4 px-6 transition duration-500 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="file-text" class="w-5 h-5 inline-block mr-2"></span>
+                Summaries
+              </h3>
+              <p x-bind:class="selected === 2 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-100 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+            <div role="button" tabindex="0" x-on:click="selected = 3" x-bind:class="selected === 3 ? 'bg-neutral-50' : 'bg-transparent'" class="flex flex-col rounded-3xl hover:bg-neutral-50 py-4 px-6 transition duration-500 ease-in-out">
+              <h3 class="text-xl text-balance flex items-center">
+                <span data-lucide="list-checks" class="w-5 h-5 inline-block mr-2"></span>
+                Lists
+              </h3>
+              <p x-bind:class="selected === 3 ? 'max-h-56 pt-4 opacity-100' : 'max-h-0 opacity-0'" class="overflow-hidden transition-[max-height] transition-opacity duration-100 ease-in-out">
+                Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-2/3">
+          <div class="bg-neutral-50 aspect-[4/3] rounded-3xl flex items-center justify-center">
+            <div x-show="selected === 1" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
+              <div class="flex items-center gap-x-4 border border-neutral-300/60 rounded-3xl p-4">
+                <div class="flex items-center justify-center bg-green-700 rounded-full p-2"><span data-lucide="check" class="w-5 h-5 inline-block text-white"></span></div>
+                <p class="grow text-xl text-neutral-600">
+                  Hvornår udløber tilstandsrapporten?
+                </p>
+                <span class="text-neutral-600 px-4 py-2 bg-white rounded-3xl">
+                  1. januar 2024
+                </span>
+              </div>
+            </div>
+            <div x-show="selected === 2" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
+              <div class="flex items-start gap-x-4 border border-neutral-200 rounded-3xl p-4">
+                <div class="flex items-center justify-center bg-green-700 rounded-full p-2"><span data-lucide="check" class="w-5 h-5 inline-block text-white"></span></div>
+                <div class="grow flex flex-col gap-y-4">
+                  <p class="h-5 my-2 leading-none text-xl text-neutral-600">
+                    Indeholder ejerskifteforsikringen forbehold?
+                  </p>
+                  <span class="text-neutral-600 px-4 py-2 bg-white rounded-2xl">
+                    Aliquip occaecat mollit cillum officia pariatur exercitation labore magna nisi sunt sit magna duis. Culpa est sunt voluptate tempor ut cupidatat voluptate. Laborum cupidatat labore ex aute esse proident minim reprehenderit laborum aute ex et incididunt tempor veniam. Deserunt nulla proident sit aute et mollit id aliquip. Dolore sunt cillum officia amet anim. Cillum est excepteur non eiusmod proident. Et sint labore exercitation et occaecat qui irure dolore eiusmod non aliqua sit sunt aliqua minim.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div x-show="selected === 3" x-transition:enter-start="opacity-0 scale-90" x-transition:enter="ease-out transition-slow" x-transition:enter-end="opacity-100 scale-100" class="w-10/12 ease-in-out duration-300">
+              <img src="{{ '/assets/images/list.png' | relative_url }}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <section id="product" class="container max-w-screen-xl mx-auto flex flex-col gap-y-20">
@@ -122,7 +209,7 @@ questions:
           </h3>
         </div>
         <p class="text-lg text-stone-600 w-4/5">
-          Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+          Klerk analyserer hurtigt og præcist alt indhold - fra købsaftale og rapporter til alle relevante servitutter og andre dokumenter.
         </p>
       </div>
       <div class="w-full md:w-1/2 order-first">
@@ -130,7 +217,7 @@ questions:
           <div class="w-full sm:w-10/12 flex flex-col gap-y-2 scale-90 sm:scale-100">
             {% for document in page.documents %}
               <div class="flex items-stretch gap-x-4 bg-white rounded-3xl p-4">
-                <div class="flex items-center justify-center"><span data-lucide="file-check" class="w-10 h-8 stroke-1 inline-block text-green-800"></span></div>
+                <div class="flex items-center justify-center"><span data-lucide="file-check-2" class="w-10 h-8 stroke-1 inline-block text-green-800"></span></div>
                 <div class="grow flex flex-col">
                   <p class="grow text-lg text-neutral-600">
                     {{ document.name }}
@@ -159,9 +246,9 @@ questions:
       </div>
       <div class="w-full md:w-1/2 order-first md:order-none">
         <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center p-4">
-          <div class="w-full sm:w-10/12 flex flex-col gap-y-2 scale-90 sm:scale-100">
+          <div class="w-full sm:w-10/12 flex flex-col divide-y divide-neutral-200/80 scale-90 sm:scale-100">
             {% for metric in page.metrics %}
-              <div class="flex items-center gap-x-4 rounded-3xl">
+              <div class="flex items-center gap-x-4 rounded-3xl py-2">
                 <div class="flex items-center justify-center rounded-full bg-green-800 p-1"><span data-lucide="check" class="w-4 h-4 inline-block text-white"></span></div>
                 <div class="grow flex flex-col">
                   <p class="grow text-xl text-neutral-600">
