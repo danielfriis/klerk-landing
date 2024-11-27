@@ -6,9 +6,12 @@ permalink: /:collection/:slug
 
 include:
   - _pages
+  - _legal
 
 collections:
   pages:
+    output: true
+  legal:
     output: true
 
 # collections:

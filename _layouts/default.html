@@ -17,9 +17,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body class="antialiased tracking-tight bg-neutral-50" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col">
+    <main class="flex flex-col min-h-dvh">
       {% include navigation.html %}
-      <div class="h-full flex flex-col">
+      <div class="grow flex flex-col">
         <div class="flex-grow">
           {{ content }}
         </div>
