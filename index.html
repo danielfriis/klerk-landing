@@ -21,9 +21,9 @@
     <img src="/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
   </a>
   <div class="flex items-center gap-x-6 text-sm">
-    <a href="#about">About</a>
-    <a href="#product">Product</a>
-    <a href="#" class="bg-zinc-900 text-stone-50 px-3 py-1 rounded-full">Request access</a>
+    <a href="#about">Om os</a>
+    <a href="#product">Produktet</a>
+    <a href="#" class="bg-zinc-900 text-stone-50 px-3 py-1 rounded-full">Anmod om adgang</a>
   </div>
 </nav>
 
@@ -369,7 +369,7 @@
       <div class="flex flex-col md:flex-row gap-10">
         <div class="w-full md:w-1/2">
           <h2 class="text-5xl text-balance text-stone-50">
-            Trygt, <br>sikkert, <br>og compliant
+            Sikkerhed i topklasse
           </h2>
         </div>
         <div class="w-full md:w-1/2">
@@ -427,114 +427,44 @@
       </div>
       <div class="w-full flex flex-col bg-stone-200/50 rounded-2xl divide-y divide-white justify-start text-left">
         
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
+          <div x-data="{ open: false }" class=" flex flex-col">
             <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
               <h3 class="text-xl text-balance">
-                Question 1
+                Hvad er Klerk?
               </h3>
               <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
             </div>
-            <div x-show="open" class="p-4 pt-0">
+            <div x-show="open" class="px-4 pb-6">
               <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
+                Klerk er en AI-assisteret dokumentgennemgangsplatform, der gør det nemt at finde og forstå vigtige oplysninger i komplekse dokumenter. Med Klerk kan du spare tid og reducere fejl ved at automatisere processen og give dig overblik over sagens indhold.
               </p>
             </div>
           </div>
         
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
+          <div x-data="{ open: false }" class=" flex flex-col">
             <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
               <h3 class="text-xl text-balance">
-                Question 2
+                Hvordan fungerer Klerk?
               </h3>
               <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
             </div>
-            <div x-show="open" class="p-4 pt-0">
+            <div x-show="open" class="px-4 pb-6">
               <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
+                Klerk fungerer ved at du uploader dokumenterne til platformen, og Klerk bruger AI til at gennemgå dokumenterne og finde de vigtige oplysninger. Du kan derefter få en oversigt over dokumenterne og de vigtige oplysninger, samt få forklaringer på hvordan de er fundet.
               </p>
             </div>
           </div>
         
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
+          <div x-data="{ open: false }" class=" flex flex-col">
             <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
               <h3 class="text-xl text-balance">
-                Question 3
+                Virker Klerk med alle typer af ejendomme?
               </h3>
               <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
             </div>
-            <div x-show="open" class="p-4 pt-0">
+            <div x-show="open" class="px-4 pb-6">
               <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
-              </p>
-            </div>
-          </div>
-        
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
-            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
-              <h3 class="text-xl text-balance">
-                Question 4
-              </h3>
-              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
-            </div>
-            <div x-show="open" class="p-4 pt-0">
-              <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
-              </p>
-            </div>
-          </div>
-        
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
-            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
-              <h3 class="text-xl text-balance">
-                Question 5
-              </h3>
-              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
-            </div>
-            <div x-show="open" class="p-4 pt-0">
-              <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
-              </p>
-            </div>
-          </div>
-        
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
-            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
-              <h3 class="text-xl text-balance">
-                Question 6
-              </h3>
-              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
-            </div>
-            <div x-show="open" class="p-4 pt-0">
-              <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
-              </p>
-            </div>
-          </div>
-        
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
-            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
-              <h3 class="text-xl text-balance">
-                Question 7
-              </h3>
-              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
-            </div>
-            <div x-show="open" class="p-4 pt-0">
-              <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
-              </p>
-            </div>
-          </div>
-        
-          <div x-data="{ open: false }" class=" flex flex-col gap-y-2">
-            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
-              <h3 class="text-xl text-balance">
-                Question 8
-              </h3>
-              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
-            </div>
-            <div x-show="open" class="p-4 pt-0">
-              <p class="text-lg text-stone-600">
-                Ut et voluptate adipisicing irure anim amet est mollit ex aliqua amet ipsum irure mollit sint. Cupidatat incididunt laboris ex deserunt culpa dolore labore fugiat reprehenderit irure ut dolor cillum labore. Sunt id proident fugiat eiusmod dolore nulla. Veniam incididunt non adipisicing consectetur exercitation veniam fugiat sunt sit commodo aliquip. Enim deserunt aliquip reprehenderit nulla adipisicing cupidatat esse tempor amet. Eu sunt quis eiusmod duis.
+                Ja, Klerk er designet til at fungere med alle typer af ejendomme. Vi tilbyder en bred vifte af funktioner, der er specielt tilpasset for hver enkelt type ejendom, så du kan få det bedste resultat.
               </p>
             </div>
           </div>
@@ -546,13 +476,13 @@
   <section class="container max-w-screen-xl mx-auto px-6 py-20 rounded-3xl">
     <div class="flex flex-col gap-y-10 items-center justify-center text-center">
       <h2 class="text-5xl md:text-7xl text-balance pt-10 font-medium">
-        Get started with Klerk
+        Kom i gang med Klerk
       </h2>
       <p class="text-xl text-stone-700 max-w-screen-sm text-balance">
-        Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+        Klerk er en game-changer for din dokumentgennemgang. Det er hurtigere og mere præcist end hvad du har brugt før.
       </p>
       <button class="group bg-stone-900 text-stone-50 px-5 py-3 rounded-3xl flex items-center hover:bg-stone-800 transition-colors duration-200 ease-in-out">
-        Request access
+        Anmod om adgang
         <span data-lucide="arrow-right" class="w-5 h-5 stroke-1 inline-block ml-2 group-hover:translate-x-1 transition-transform duration-200 ease-in-out"></span>
       </button>
     </div>
