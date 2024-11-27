@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body class="antialiased tracking-tight bg-neutral-50" x-init="console.log('It\'s alive!')">
-    <main class="flex flex-col">
+    <main class="flex flex-col min-h-dvh">
       <nav class="fixed inset-x-0 top-0 h-14 px-6 flex items-center justify-between bg-white md:bg-transparent">
   <a href="https://www.klerk.co">
     <img src="/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
@@ -27,11 +27,13 @@
   </div>
 </nav>
 
-      <div class="h-full flex flex-col">
+      <div class="grow flex flex-col">
         <div class="flex-grow">
-          <h1 class="text-3xl font-bold mb-10">GDPR (DK)</h1>
-<div class="text-formatted">
-  <h2 id="1-introduktion">1. Introduktion</h2>
+          <div class="flex flex-col gap-y-32 py-32 px-4 hyphens-auto">
+  <section class="container max-w-screen-xl mx-auto">
+    <h1 class="text-3xl font-bold mb-10">GDPR (DK)</h1>
+    <div class="text-formatted">
+      <h2 id="1-introduktion">1. Introduktion</h2>
 <p>Klerk er forpligtet til at beskytte persondata og overholde GDPR-reglerne. Vi stræber efter at sikre, at alle persondata håndteres sikkert og ansvarligt, i overensstemmelse med de lovmæssige krav og bedste praksis inden for databeskyttelse.</p>
 
 <h2 id="2-indsamling-og-behandling-af-data">2. Indsamling og Behandling af Data</h2>
@@ -115,6 +117,8 @@
 <h2 id="15-kontaktinformation">15. Kontaktinformation</h2>
 <p>For yderligere spørgsmål om vores GDPR-overholdelse, kontakt venligst Daniel Friis på d@friis.me.</p>
 
+    </div>
+  </section>
 </div>
 
         </div>
