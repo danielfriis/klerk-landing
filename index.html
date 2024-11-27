@@ -45,8 +45,8 @@ questions:
     </div>
   </section>
   <section class="container max-w-screen-2xl mx-auto flex flex-col">
-    <div class="flex items-center justify-center gap-x-3 rounded-3xl aspect-[15/9] bg-transparent sm:bg-stone-200/30">
-      <img src="{{ site.baseurl }}/assets/images/screen_01.png" alt="" class="w-full md:w-10/12 max-w-full h-auto object-center rounded-md border border-neutral-200 shadow-xl shadow-stone-200/50">
+    <div class="flex items-center justify-center rounded-none sm:rounded-3xl sm:aspect-[15/9] bg-transparent sm:bg-stone-200/30 overflow-hidden">
+      <img src="{{ site.baseurl }}/assets/images/screen_01.png" alt="" class="w-full md:w-10/12 max-w-full h-auto object-center rounded-sm sm:rounded-md border border-neutral-200 shadow-xl shadow-stone-200/50">
     </div>
   </section>
   <section class="hidden container max-w-screen-xl mx-auto">
@@ -122,8 +122,8 @@ questions:
         </p>
       </div>
       <div class="w-full md:w-1/2 order-first">
-        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center">
-          <div class="w-10/12 flex flex-col gap-y-2">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center p-4">
+          <div class="w-full sm:w-10/12 flex flex-col gap-y-2">
             {% for document in page.documents %}
               <div class="flex items-stretch gap-x-4 bg-white rounded-3xl p-4">
                 <div class="flex items-center justify-center"><span data-lucide="file-check" class="w-10 h-8 stroke-1 inline-block text-green-800"></span></div>
@@ -154,8 +154,8 @@ questions:
         </p>
       </div>
       <div class="w-full md:w-1/2 order-first md:order-none">
-        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center">
-          <div class="w-10/12 flex flex-col gap-y-2">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center p-4">
+          <div class="w-full sm:w-10/12 flex flex-col gap-y-2">
             {% for metric in page.metrics %}
               <div class="flex items-center gap-x-4 rounded-3xl">
                 <div class="flex items-center justify-center rounded-full bg-green-800 p-1"><span data-lucide="check" class="w-4 h-4 inline-block text-white"></span></div>
@@ -188,8 +188,8 @@ questions:
         </p>
       </div>
       <div class="w-full md:w-1/2 order-first">
-        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center">
-          <div class="w-10/12 flex flex-col gap-y-4">
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center p-4">
+          <div class="w-full sm:w-10/12 flex flex-col gap-y-4">
             <div class="flex items-center gap-x-4 rounded-3xl">
               <div class="shrink flex items-center justify-center rounded-full bg-green-800 p-1"><span data-lucide="check" class="w-4 h-4 inline-block text-white"></span></div>
               <div class="grow flex flex-col">
