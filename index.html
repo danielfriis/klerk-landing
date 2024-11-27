@@ -1,6 +1,26 @@
 ---
 layout: default
 title: Klerk
+benefits:
+  - label: 'Skab overblik'
+  - label: 'Reducer fejl'
+  - label: 'Spar tid'
+documents:
+  - name: 'Købsaftale (underskrevet).pdf'
+    size: '1.2 MB'
+  - name: 'Servitut nr 32.pdf'
+    size: '2.3 MB'
+  - name: 'Tilstandsrapport.pdf'
+    size: '1.4 MB'
+metrics:
+  - label: 'Overtagelsesdato'
+    value: '1. marts 2025'
+  - label: 'Dispositionsret'
+    value: '1. februar 2025'
+  - label: 'Kontantpris'
+    value: '3.200.000 kr'
+  - label: 'Udbetaling'
+    value: '200.000 kr'
 ---
 
 <!-- Hero -->
@@ -16,8 +36,8 @@ title: Klerk
     </div>
   </section>
   <section class="container max-w-screen-2xl mx-auto flex flex-col">
-    <div class="flex items-center justify-center gap-x-3 rounded-3xl aspect-[15/9] bg-westar-100">
-      <img src="{{ site.baseurl }}/assets/images/screen_01.png" alt="" class="w-10/12 h-auto object-center rounded-md">
+    <div class="flex items-center justify-center gap-x-3 rounded-3xl aspect-[15/9] bg-stone-200/30">
+      <img src="{{ site.baseurl }}/assets/images/screen_01.png" alt="" class="w-10/12 h-auto object-center rounded-md border border-neutral-200 shadow-xl shadow-stone-200/50">
     </div>
   </section>
   <section class="hidden container max-w-screen-xl mx-auto">
@@ -53,11 +73,11 @@ title: Klerk
   </section>
   <section class="container max-w-screen-xl mx-auto">
     <div class="flex flex-col md:flex-row gap-4">
-      {% for i in (1..3) %}
+      {% for benefit in page.benefits %}
         <div class="basis-full md:basis-1/3">
           <div class="bg-stone-200/50 aspect-video rounded-3xl flex flex-col items-center justify-center">
-            <p class="text-7xl md:text-6xl">
-              90%
+            <p class="text-4xl">
+              {{ benefit.label }}
             </p>
             <p class="text-xl text-stone-600">
               faster due diligence
@@ -82,53 +102,121 @@ title: Klerk
     </div>
     <div class="flex flex-col md:flex-row items-center gap-x-10 gap-y-6">
       <div class="flex flex-col gap-4 w-full md:w-1/2">
-        <h3 class="text-2xl text-balance">
-          Find svar på rekordtid
-        </h3>
-        <p class="text-lg text-stone-600">
+        <div class="flex items-center gap-x-4">
+          <span class="w-10 h-10 bg-neutral-800 text-white rounded-full flex items-center justify-center text-2xl">1</span>
+          <h3 class="text-2xl text-balance">
+            Upload sagens dokumenter
+          </h3>
+        </div>
+        <p class="text-lg text-stone-600 w-4/5">
           Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
         </p>
       </div>
       <div class="w-full md:w-1/2 order-first">
         <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center">
-          <div class="w-10/12 ease-in-out duration-300">
-            <div class="flex items-center gap-x-4 border border-neutral-300/60 rounded-3xl p-4">
-              <div class="flex items-center justify-center bg-green-700 rounded-full p-2"><span data-lucide="check" class="w-5 h-5 inline-block text-white"></span></div>
-              <p class="grow text-xl text-neutral-600">
-                Hvornår udløber tilstandsrapporten?
-              </p>
-              <span class="text-neutral-600 px-4 py-2 bg-white rounded-3xl">
-                1. januar 2024
-              </span>
-            </div>
+          <div class="w-10/12 flex flex-col gap-y-2">
+            {% for document in page.documents %}
+              <div class="flex items-stretch gap-x-4 bg-white rounded-3xl p-4">
+                <div class="flex items-center justify-center"><span data-lucide="file-check" class="w-10 h-8 stroke-1 inline-block text-green-800"></span></div>
+                <div class="grow flex flex-col">
+                  <p class="grow text-lg text-neutral-600">
+                    {{ document.name }}
+                  </p>
+                  <span class="text-neutral-400 text-sm">
+                    {{ document.size }}
+                  </span>
+                </div>
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
     </div>
     <div class="flex flex-col md:flex-row items-center gap-x-10 gap-y-6">
       <div class="flex flex-col gap-4 w-full md:w-1/2">
-        <h3 class="text-2xl text-balance">
-          Klerk analyzes your data
-        </h3>
-        <p class="text-lg text-stone-600">
+        <div class="flex items-center gap-x-4">
+          <span class="w-10 h-10 bg-neutral-800 text-white rounded-full flex items-center justify-center text-2xl">2</span>
+          <h3 class="text-2xl text-balance">
+            Få overblikket
+          </h3>
+        </div>
+        <p class="text-lg text-stone-600 w-4/5">
           Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
         </p>
       </div>
       <div class="w-full md:w-1/2 order-first md:order-none">
-        <div class="bg-stone-200/50 aspect-video rounded-3xl"></div>
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center">
+          <div class="w-10/12 flex flex-col gap-y-2">
+            {% for metric in page.metrics %}
+              <div class="flex items-center gap-x-4 rounded-3xl">
+                <div class="flex items-center justify-center rounded-full bg-green-800 p-1"><span data-lucide="check" class="w-4 h-4 inline-block text-white"></span></div>
+                <div class="grow flex flex-col">
+                  <p class="grow text-xl text-neutral-600">
+                    {{ metric.label }}
+                  </p>
+                </div>
+                <div class="w-1/3 bg-white rounded-xl p-2 flex items-center justify-end">
+                  <span class="text-neutral-600 text-sm">
+                    {{ metric.value }}
+                  </span>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
     <div class="flex flex-col md:flex-row items-center gap-x-10 gap-y-6">
       <div class="flex flex-col gap-4 w-full md:w-1/2">
-        <h3 class="text-2xl text-balance">
-          Klerk provides you with a report
-        </h3>
+        <div class="flex items-center gap-x-4">
+          <span class="w-10 h-10 bg-neutral-800 text-white rounded-full flex items-center justify-center text-2xl">3</span>
+          <h3 class="text-2xl text-balance">
+            Dyk ned i detaljerne
+          </h3>
+        </div>
         <p class="text-lg text-stone-600">
           Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
         </p>
       </div>
       <div class="w-full md:w-1/2 order-first">
-        <div class="bg-stone-200/50 aspect-video rounded-3xl"></div>
+        <div class="bg-stone-200/50 aspect-video rounded-3xl flex items-center justify-center">
+          <div class="w-10/12 flex flex-col gap-y-4">
+            <div class="flex items-center gap-x-4 rounded-3xl">
+              <div class="shrink flex items-center justify-center rounded-full bg-green-800 p-1"><span data-lucide="check" class="w-4 h-4 inline-block text-white"></span></div>
+              <div class="grow flex flex-col">
+                <p class="grow text-xl text-neutral-600">
+                  Overtagelsesdato
+                </p>
+              </div>
+              <div class="w-1/3 bg-white rounded-xl p-2 flex items-center justify-end">
+                <span class="text-neutral-600 text-sm">
+                  1. marts 2025
+                </span>
+              </div>
+            </div>
+            <div class="ml-10 flex flex-col gap-y-4">
+              <div>
+                <h4 class="text-sm font-medium text-stone-500 mb-1">
+                  Forklaring
+                </h4>
+                <p class="text-stone-600">
+                  Jeg har kigget sagens dokumenter igennem og kan konkludere jf. Købsaftalen, at overtagelsesdatoen er fastsat til den 1. marts 2025.
+                </p>
+              </div>
+              <div class="flex flex-col gap-y-2">
+                <h4 class="text-sm font-medium text-stone-500 mb-1">Kilder</h4>
+                <div>
+                  <div class="border border-stone-300/80 rounded-xl p-2 flex items-center justify-between">
+                    <p class="text-stone-600">
+                      Købsaftale (underskrevet).pdf
+                    </p>
+                    <span class="text-neutral-400 text-sm">Side 14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -213,7 +301,7 @@ title: Klerk
     </div>
   </section> 
   
-  <section class="container max-w-screen-xl mx-auto px-6 py-20 bg-amber-300 rounded-3xl">
+  <section class="container max-w-screen-xl mx-auto px-6 py-20 rounded-3xl">
     <div class="flex flex-col gap-y-10 items-center justify-center text-center">
       <h2 class="text-5xl md:text-7xl text-balance pt-10 font-medium">
         Get started with Klerk
