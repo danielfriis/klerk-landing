@@ -16,7 +16,7 @@
   </head>
   <body class="antialiased tracking-tight bg-neutral-50" x-init="console.log('It\'s alive!')">
     <main class="flex flex-col min-h-dvh">
-      <nav class="fixed inset-x-0 top-0 h-14 px-6 flex items-center justify-between bg-white md:bg-transparent">
+      <nav class="fixed z-50 inset-x-0 top-0 h-14 px-6 flex items-center justify-between bg-white md:bg-transparent">
   <a href="https://www.klerk.co">
     <img src="/assets/images/logo.svg" alt="Klerk" class="w-auto h-4">
   </a>
@@ -39,6 +39,26 @@
       <p class="text-2xl text-stone-400 text-balance max-w-screen-md mx-auto">
         Lad Klerk gøre det hårde arbejde. Vi automatiserer dokumentgennemgang, reducerer fejl, og frigiver tid til rådgivning af dine kunder.
       </p>
+      <div class="flex items-center justify-center gap-x-8">
+        <div class="flex items-center gap-x-2">
+          <span data-lucide="rabbit" class="w-5 h-5 inline-block text-neutral-800"></span>
+          <span>
+            Hurtigt
+          </span>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <span data-lucide="shield-check" class="w-5 h-5 inline-block text-neutral-800"></span>
+          <span>
+            Sikkert
+          </span>
+        </div>
+        <div class="flex items-center gap-x-2">
+          <span data-lucide="goal" class="w-5 h-5 inline-block text-neutral-800"></span>
+          <span>
+            Præcist
+          </span>
+        </div>
+      </div>
     </div>
   </section>
   <section class="container max-w-screen-2xl mx-auto flex flex-col">
@@ -243,7 +263,7 @@
       </div>
       <div class="w-full md:w-1/2">
         <p class="text-lg text-stone-600">
-          Klerk is a game-changer for our due diligence process. It's faster and more accurate than anything we've used before.
+          Det bliver ikke lettere at finde de vigtige oplysninger i dokumenterne. Klerk er designet til at fjerne alt det hårde arbejde, så du kan fokusere på de vigtige oplysninger.
         </p>
       </div>
     </div>
@@ -566,6 +586,34 @@
             <div x-show="open" class="px-4 pb-6">
               <p class="text-lg text-stone-600">
                 Ja, Klerk er kompatibel med GDPR. Vi sikrer, at alle data, der behandles gennem platformen, overholder de nærmeste regler. Du finder vores DPA og Fortrolighedspolitik nederst i 'footeren' på denne side.
+              </p>
+            </div>
+          </div>
+        
+          <div x-data="{ open: false }" class=" flex flex-col">
+            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
+              <h3 class="text-xl text-balance">
+                Hvordan kan jeg få adgang til Klerk?
+              </h3>
+              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
+            </div>
+            <div x-show="open" class="px-4 pb-6">
+              <p class="text-lg text-stone-600">
+                Du kan få adgang til Klerk ved at klikke på knappen "Anmod om adgang" i navigationen øverst på siden. Herefter vil du blive kontaktet af vores salgs- og supporttekniker, som vil hjælpe dig med at komme i gang.
+              </p>
+            </div>
+          </div>
+        
+          <div x-data="{ open: false }" class=" flex flex-col">
+            <div role="button" tabindex="0" class="cursor-pointer flex items-center justify-between p-4" x-on:click="open = !open">
+              <h3 class="text-xl text-balance">
+                Hvad koster Klerk?
+              </h3>
+              <span data-lucide="chevron-down" class="w-5 h-5 inline-block ml-auto transition-transform duration-200 ease-in-out" x-bind:class="open ? 'rotate-180' : ''"></span>
+            </div>
+            <div x-show="open" class="px-4 pb-6">
+              <p class="text-lg text-stone-600">
+                Klerk er gratis at bruge i den tid, hvor vi stadig er i beta-test. Efter beta-testen vil vi have en pris på Klerk, som vil være afhængig af hvor meget du bruger Klerk. Du kommer således aldrig til at betale mere end den værdi Klerk giver dig.
               </p>
             </div>
           </div>
