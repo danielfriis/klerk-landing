@@ -2,6 +2,8 @@ url: "https://www.klerk.co" # the base hostname & protocol for your site, e.g. h
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Klerk" # the name of your site, e.g. ACME Corp.
 
+access_url: "https://tally.so/r/3l0X4W"
+
 permalink: /:collection/:slug
 
 include:
