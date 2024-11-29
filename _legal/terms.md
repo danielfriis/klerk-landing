@@ -20,8 +20,7 @@ Ved at tilgå eller bruge Servicen, accepterer du følgende:
 ## 2. Virksomhedsinformation
 
 Klerk
-[Virksomhedens adresse]
-For spørgsmål, kan du kontakte os på: [Virksomhedens kontakt-email]
+For spørgsmål, kan du kontakte os på: hello@klerk.co
 
 ## 3. Ændringer af Servicevilkår eller Servicen
 
@@ -63,7 +62,7 @@ Vi forbeholder os ret til at suspendere eller lukke din konto for enhver overtr�
 
 ## 7. Immaterielle Rettigheder
 
-7.1 Servicen og alt associeret indhold, funktioner og funktionalitet er [Virksomhedsnavn] eller dets licensgiveres eksklusive ejendom.
+7.1 Servicen og alt associeret indhold, funktioner og funktionalitet er Klerk eller dets licensgiveres eksklusive ejendom.
 
 7.2 Du får en begrænset, ikke-eksklusiv, ikke-overførbar licens til at bruge Servicen til dets tilsigtede formål. Alle rettigheder, der ikke udtrykkeligt er givet, er forbeholdt os.
 
@@ -99,8 +98,7 @@ Vi forbeholder os ret til at suspendere eller lukke din konto for enhver overtr�
 - En erklæring om troende tro, at indholdet er overtrådende.
 - Din underskrift (fysisk eller elektronisk).
 
-11.2 DMCA-notifikationer skal sendes til:
-[Insert DMCA Contact Email/Address]
+11.2 DMCA-notifikationer skal sendes til: hello@klerk.co
 
 ## 12. Fraskrivelse af garantier
 
@@ -122,13 +120,11 @@ Du accepterer at skadesløsholde, forsvare og holde [Virksomhedens navn], dets t
 - Din overtrædelse af disse ServiceVilkår.
 - Din overtrædelse af enhver tredjeparts rettigheder.
 
-## 15. Voldgift og tvistbilæggelse
+## 15. Tvister
 
-15.1 Eventuelle tvister, der opstår som følge af eller relateret til disse Servicevilkår eller tjenesten, vil blive løst gennem bindende voldgift udført af [Voldgiftsorganet] i overensstemmelse med dets regler.
+15.1 Eventuelle tvister, der opstår som følge af eller relateret til disse Servicevilkår eller Servicen, vil blive løst hos de danske domstole, i Danmark, uden hensyn til dens konfliktlovmæssige principper.
 
-15.2 Voldgiften vil finde sted i [City, State], og voldgiftssproget vil være engelsk.
-
-15.3 Du giver afkald på din ret til at deltage i gruppesøgsmål eller voldgift på gruppeniveau.
+15.2 Du giver afkald på din ret til at deltage i gruppesøgsmål eller voldgift på gruppeniveau.
 
 ## 16. Privatlivspolitik
 
@@ -136,19 +132,19 @@ Vores Privatlivspolitik forklarer, hvordan vi indsamler, bruger og beskytter din
 
 ## 17. Opsigelse
 
-17.1 Vi forbeholder os ret til at suspendere eller lukke din adgang til Servicen når som helst for enhver grund, herunder for overtrædelse af disse ServiceVilkår.
+17.1 Vi forbeholder os ret til at suspendere eller lukke din adgang til Servicen når som helst for enhver grund, herunder for overtrædelse af disse Servicevilkår.
 
-17.2 Ved opsigelse vil alle licenser og rettigheder, der er bemyndiget til dig under disse ServiceVilkår, ophøre umiddelbart.
+17.2 Ved opsigelse vil alle licenser og rettigheder, der er bemyndiget til dig under disse Servicevilkår, ophøre umiddelbart.
 
 ## 18. Gældende lov
 
-Disse ServiceVilkår er underlagt og fortolket i overensstemmelse med loven i [Insert State], uden hensyn til dens konfliktlovmæssige principper.
+Disse Servicevilkår er underlagt og fortolket i overensstemmelse med loven i Danmark, uden hensyn til dens konfliktlovmæssige principper.
 
 ## 19. Hele aftalen
 
-Disse ServiceVilkår, sammen med vores Privatlivspolitik, danner den samlede aftale mellem dig og [Virksomhedens navn] om Service og erstatter alle tidligere aftaler.
+Disse Servicevilkår, sammen med vores Privatlivspolitik, danner den samlede aftale mellem dig og Klerk om Service og erstatter alle tidligere aftaler.
 
 ## 20. Kontaktinformation
 
-Hvis du har spørgsmål til disse ServiceVilkår, kan du kontakte os på:
-[Insert Contact Email]
+Hvis du har spørgsmål til disse Servicevilkår, kan du kontakte os på:
+hello@klerk.co

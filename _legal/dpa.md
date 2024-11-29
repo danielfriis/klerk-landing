@@ -3,7 +3,7 @@ layout: page
 title: Databehandleraftale
 ---
 
-Denne databehandleraftale ("DPA") udgør en del af Servicevilkårene eller anden skriftlig eller elektronisk aftale mellem dig som kunde ("Dataansvarlig") og Klerk, beliggende på Hovedgade 1, Danmark ("Databehandler") (samlet omtalt som "Parterne").
+Denne databehandleraftale ("DPA") udgør en del af Servicevilkårene eller anden skriftlig eller elektronisk aftale mellem dig som kunde ("Dataansvarlig") og Klerk ("Databehandler") (samlet omtalt som "Parterne").
 
 Denne databeskyttelsesmyndighed regulerer databehandlerens behandling af personoplysninger på vegne af dataansvarlig i forbindelse med dataansvarligs brug af Klerks tjenester. Denne databeskyttelsesmyndighed har til formål at sikre overholdelse af relevante databeskyttelseslove, herunder men ikke begrænset til EU's generelle databeskyttelsesforordning (GDPR) og, hvor det er relevant, California Consumer Privacy Act (CCPA).
 
@@ -118,5 +118,4 @@ Denne DPA er underlagt lovgivningen i Danmark, og enhver tvist, der opstår unde
 
 For spørgsmål vedrørende denne DPA, kontakt venligst:
 
-E-mail: privacy@klerk.com
-Adresse: Hovedgade 1, Danmark
+E-mail: hello@klerk.co

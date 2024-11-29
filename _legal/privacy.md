@@ -97,5 +97,4 @@ Vi kan opdatere denne fortrolighedspolitik fra tid til anden. Ændringer vil bli
 
 Hvis du har spørgsmål eller bekymringer vedrørende denne privatlivspolitik, bedes du kontakte os:
 
-E-mail: privacy@klerk.com
-Adresse: Hovedgade 1, Danmark
+E-mail: hello@klerk.co
